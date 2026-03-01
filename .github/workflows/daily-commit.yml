@@ -2,9 +2,11 @@ name: Daily Auto Commit Workflow
 
 on:
   schedule:
-    # Runs daily at 05:30 UTC (specific hour/minute, no wildcards)
     - cron: "30 5 * * *"
-  workflow_dispatch:  # Allows manual trigger for testing
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   daily-commit:
